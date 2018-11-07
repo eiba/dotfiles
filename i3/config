@@ -380,8 +380,8 @@ bindsym XF86MonBrightnessDown exec light -U 10
 #Move screen two on top
 exec xrandr --output HDMI-1 --auto --above eDP-1
 
-#enable redshift
-bindsym $mod+Control+r exec pkill -USR1 redshift
+# enable redshift
+# bindsym $mod+Control+r exec pkill -USR1 redshift
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
