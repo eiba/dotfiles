@@ -374,6 +374,9 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
+# enable tap to click
+exec xinput set-prop 11 279 1
+
 # Touchpad controls
 # bindsym XF86TouchpadToggle exec /home/eiba/09/Scripts/toggletouchpad.sh # toggle touchpad
 
@@ -402,10 +405,11 @@ exec spotify
 exec compton -f 
 
 #set wallpaper 
-exec_always feh --bg-scale /home/eiba/.config/Wallpapers/Hd-Space-Planet-Man-Dog.jpg
+# exec_always feh --bg-scale /home/eiba/.config/Wallpapers/Images/Hd-Space-Planet-Man-Dog.jpg
+exec /home/eiba/.config/i3/Scripts/gifWallpaper.sh 0.1 /home/eiba/.config/Wallpapers/Gifs/rainyroom.gif
 
 #open config file
 bindsym $mod+Control+c exec gedit /home/eiba/.config/i3/config
 
-
+bindsym $mod+Control+t exec wine /home/eiba/.wine/drive_c/users/eiba/Application\ Data/uTorrent\ Web/utweb.exe
 
