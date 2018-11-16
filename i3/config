@@ -37,10 +37,10 @@ bindsym $mod+Shift+q kill
 
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+oslash focus right
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+l focus up
+# bindsym $mod+oslash focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -202,8 +202,14 @@ bar {
 }
 
 # lock screen
-# bindsym $mod+Shift+x exec i3lock --color "$bg-color"
-bindsym $mod+Shift+x exec /home/eiba/.config/i3/Scripts/lock.sh
+# custom script with lock icon
+# bindsym $mod+l exec /home/eiba/.config/i3/Scripts/lock.sh
+# mantablockscreen theme
+# "mantablockscreen -i /home/eiba/.config/Wallpapers/Images/Friendly-Dragon.png" for setting background
+bindsym $mod+l exec lock2
+#betterlockscreen theme
+# bindsym $mod+l exec betterlockscreen -l dimblur
+
 # remove borders
 # for_window [class="^.*"] border pixel 0
 
@@ -402,11 +408,12 @@ exec discord
 #start spotify on startup
 exec spotify
 
-exec compton -f 
+exec compton -f
 
 #set wallpaper 
-# exec_always feh --bg-scale /home/eiba/.config/Wallpapers/Images/Hd-Space-Planet-Man-Dog.jpg
-exec /home/eiba/.config/i3/Scripts/gifWallpaper.sh 0.1 /home/eiba/.config/Wallpapers/Gifs/rainyroom.gif
+exec_always feh --bg-scale /home/eiba/.config/Wallpapers/Images/Hd-Space-Planet-Man-Dog.png
+# exec /home/eiba/.config/i3/Scripts/gifWallpaper.sh 0.1 /home/eiba/.config/Wallpapers/Gifs/rainyroom.gif
+bindsym $mod+Control+w exec /home/eiba/.config/i3/Scripts/gifWallpaper.sh 0.1 /home/eiba/.config/Wallpapers/Gifs/rainyroom.gif
 
 #open config file
 bindsym $mod+Control+c exec gedit /home/eiba/.config/i3/config
