@@ -206,7 +206,7 @@ bar {
 # bindsym $mod+l exec /home/eiba/.config/i3/Scripts/lock.sh
 # mantablockscreen theme
 # "mantablockscreen -i /home/eiba/.config/Wallpapers/Images/Friendly-Dragon.png" for setting background
-bindsym $mod+l exec lock2
+bindsym $mod+l exec /home/eiba/.config/i3/Scripts/lock2.sh
 #betterlockscreen theme
 # bindsym $mod+l exec betterlockscreen -l dimblur
 

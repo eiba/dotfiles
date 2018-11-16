@@ -1,7 +1,7 @@
 #!/bin/bash
 
 wallpaper=$2
-cachepath=$HOME/.cache/mantablockscreen
+cachepath=$HOME/.cache/i3lock-color
 cropuser=$cachepath/$USER-pic-crop.png
 fullname=`getent passwd $USER | cut -d ":" -f 5`
 full_alias="${fullname} (${USER})"
@@ -25,7 +25,7 @@ verif_color=fefefe66
 cropuser() {
 	ava_home=$HOME/.face
 	ava_var=/var/lib/AccountsService/icons/$USER
-	userpic=/usr/share/mantabassets/userpic.png
+	userpic=/home/eiba/.config/Avatars/userpic.png
 	if [[ -e $ava_home ]]; then
 		userpic=$ava_home
 	elif [[ -e $ava_var ]]; then
@@ -55,8 +55,8 @@ blurbg() {
 
 genbg() {
 	echo "Caching image ..."
-	if [[ ! -d $HOME/.cache/mantablockscreen ]]; then
-		mkdir $HOME/.cache/mantablockscreen
+	if [[ ! -d $HOME/.cache/i3lock-color ]]; then
+		mkdir $HOME/.cache/i3lock-color
 	fi
 	cropuser
 	cropbg
