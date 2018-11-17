@@ -214,8 +214,8 @@ bindsym $mod+l exec /home/eiba/.config/i3/Scripts/lock2.sh
 # for_window [class="^.*"] border pixel 0
 
 #set some i3-gaps default values
-set $default_gaps_inner 10
-set $default_gaps_outer 6
+set $default_gaps_inner 11
+set $default_gaps_outer 4
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
 smart_gaps on
@@ -412,7 +412,7 @@ exec compton -f
 
 #set wallpaper 
 exec_always feh --bg-scale /home/eiba/.config/Wallpapers/Images/Hd-Space-Planet-Man-Dog.png
-# exec /home/eiba/.config/i3/Scripts/gifWallpaper.sh 0.1 /home/eiba/.config/Wallpapers/Gifs/rainyroom.gif
+# Gif wallpaper, can be switched out with forest, snowy, rainyroom etc.
 bindsym $mod+Control+w exec /home/eiba/.config/i3/Scripts/gifWallpaper.sh 0.1 /home/eiba/.config/Wallpapers/Gifs/rainyroom.gif
 
 #open config file
