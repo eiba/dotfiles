@@ -142,7 +142,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id powermenu $(echo "\n\n" | rofi -dmenu -config ~/.config/rofi/powermenu.rasi)
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -397,7 +399,7 @@ exec xrandr --output HDMI-1 --auto --above eDP-1
 
 # bindsym $mod+d exec rofi -modi run -show run 
 # bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85-" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 15"
-bindsym $mod+d exec rofi -modi drun -show drun
+bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun
 #bindsym $mod+d exec /home/eiba/.config/i3/Scripts/customRofiTheme.sh
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
@@ -414,7 +416,7 @@ exec compton -f
 #set wallpaper 
 exec_always feh --bg-scale /home/eiba/.config/Wallpapers/Images/Hd-Space-Planet-Man-Dog.png
 # Gif wallpaper, can be switched out with forest, snowy, rainyroom etc.
-bindsym $mod+Control+w exec /home/eiba/.config/i3/Scripts/setgif.sh 0.1 /home/eiba/.config/Wallpapers/Gifs/rainyroom.gif
+bindsym $mod+Control+w exec --no-startup-id /home/eiba/.config/i3/Scripts/setgif.sh 0.1 /home/eiba/.config/Wallpapers/Gifs/rainyroom.gif
 
 #open config file
 bindsym $mod+Control+c exec gedit /home/eiba/.config/i3/config

@@ -1,0 +1,10 @@
+#!/bin/bash
+#Takes the symbols ,  and  as input for shutting down, restarting or logging off.
+
+if [ "$1" == "" ]; then
+  poweroff
+elif [ "$1" == "" ]; then
+  reboot
+elif [ "$1" == "" ]; then
+  i3 exit
+fi
