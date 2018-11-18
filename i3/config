@@ -381,7 +381,7 @@ bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
 # enable tap to click
-exec xinput set-prop 11 279 1
+exec xinput set-prop 11 281 1
 
 # Touchpad controls
 # bindsym XF86TouchpadToggle exec /home/eiba/09/Scripts/toggletouchpad.sh # toggle touchpad
@@ -397,7 +397,8 @@ exec xrandr --output HDMI-1 --auto --above eDP-1
 
 # bindsym $mod+d exec rofi -modi run -show run 
 # bindsym $mod+d exec rofi -show run -lines 3 -eh 2 -width 100 -padding 800 -opacity "85-" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#9575cd" -font "System San Francisco Display 15"
-bindsym $mod+d exec /home/eiba/.config/i3/Scripts/customRofiTheme.sh
+bindsym $mod+d exec rofi -modi drun -show drun
+#bindsym $mod+d exec /home/eiba/.config/i3/Scripts/customRofiTheme.sh
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
