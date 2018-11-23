@@ -61,14 +61,13 @@ genbg() {
 	cropuser
 	cropbg
 	blurbg
-	composite -geometry "+$((half_width-50))+$((half_height-130))" $cropuser $cachepath/resize-blur.png $cachepath/resize-pic-blur.png
 	composite -geometry "+$((half_width-50))+$((half_height+10))" $cropuser $cachepath/resize-blur.png $cachepath/resize-pic-sc-blur.png
 	echo "Finished caching image"
 }
 
 lock() {
 	date_now=$(date +'%d. %B')
-	i3lock -n --force-clock -i $cachepath/resize-pic-sc-blur.png \
+	i3lock -t -n --force-clock -i $cachepath/resize-pic-sc-blur.png \
 	--indpos="w/2:h/2+60" --timepos="w/2:h/2-80" --datepos="w/2:h/2-20" --greeterpos="w/2:h/2+140" \
 	--insidevercolor=$verif_color --insidewrongcolor=$wrong_color --insidecolor=fefefe00 \
 	--ringvercolor=$verif_color --ringwrongcolor=$wrong_color --ringcolor=$fg_color \

@@ -8,3 +8,6 @@ elif [ "$1" == "" ]; then
 elif [ "$1" == "" ]; then
   i3 exit
 fi
+
+exit 0
+
