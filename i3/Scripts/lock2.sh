@@ -32,16 +32,16 @@ cropuser() {
 		userpic=$ava_var
 	fi
 
-	convert $userpic -resize 100x100 -gravity Center \( \
-		-size 100x100 xc:Black \
+	convert $userpic -resize 176x176 -gravity Center \( \
+		-size 176x176 xc:Black \
 		-fill White \
-		-draw "circle 50 50 50 1" \
+		-draw "circle 89 89 89 1" \
 		-alpha Copy\
 		\) -compose CopyOpacity -composite -trim $cropuser
 }
 
 cropbg() {
-	convert "$wallpaper" -resize ${width}x -gravity center -crop ${width}x${height}+0+0 +repage \( \
+	convert "$wallpaper" -resize ${width}x${height}\! -gravity center -crop ${width}x${height}+0+0 +repage \( \
         -size 120x140 xc:none \
         \) -gravity south -compose over -composite $cachepath/resize.png
 }
@@ -61,7 +61,7 @@ genbg() {
 	cropuser
 	cropbg
 	blurbg
-	composite -geometry "+$((half_width-50))+$((half_height+10))" $cropuser $cachepath/resize-blur.png $cachepath/resize-pic-sc-blur.png
+	composite -geometry "+$((half_width-90))+$((half_height+19))" $cropuser $cachepath/resize-blur.png $cachepath/resize-pic-sc-blur.png
 	echo "Finished caching image"
 }
 

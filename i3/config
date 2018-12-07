@@ -8,7 +8,7 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
+	
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -216,8 +216,8 @@ bindsym $mod+l exec /home/eiba/.config/i3/Scripts/lock2.sh
 # for_window [class="^.*"] border pixel 0
 
 #set some i3-gaps default values
-set $default_gaps_inner 11
-set $default_gaps_outer 4
+set $default_gaps_inner 10
+set $default_gaps_outer 2
 gaps inner $default_gaps_inner
 gaps outer $default_gaps_outer
 smart_gaps on
@@ -383,15 +383,16 @@ bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
 # enable tap to click
-exec xinput set-prop 11 281 1
+exec xinput set-prop 12 314 1
+exec xinput set-prop 12 283 1
 
 # Touchpad controls
 # bindsym XF86TouchpadToggle exec /home/eiba/09/Scripts/toggletouchpad.sh # toggle touchpad
 
 # Move screen two on top
-exec xrandr --output HDMI-1 --auto --above eDP-1
+exec xrandr --output HDMI-1 --auto --above eDP-1-1
 # Duplicate screens
-# exec xrandr --output HDMI-1 --same-as eDP-1 
+# exec xrandr --output HDMI-1 --same-as eDP-1-1 
 
 # enable redshift
 # bindsym $mod+Control+r exec pkill -USR1 redshift
@@ -411,23 +412,23 @@ bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun
 #start discord on startup
 exec discord
 #start spotify on startup
-exec spotify
+exec spotify --force-device-scale-factor=1.9
 
 exec compton -f
 
 #set wallpaper 
 exec_always feh --bg-scale /home/eiba/.config/Wallpapers/Images/Hd-Space-Planet-Man-Dog.png
 # Gif wallpaper, can be switched out with forest, snowy, rainyroom etc.
-bindsym $mod+Control+w exec /home/eiba/.config/i3/Scripts/setgif.sh 0.1 /home/eiba/.config/Wallpapers/Gifs/snowydeer.gif
+bindsym $mod+Control+w exec /home/eiba/.config/i3/Scripts/setgif.sh 0.1 /home/eiba/.config/Wallpapers/Gifs/rainyroom.gif
 
 #open config file
 bindsym $mod+Control+c exec gedit /home/eiba/.config/i3/config
 
-bindsym $mod+Control+t exec wine /home/eiba/.wine/drive_c/users/eiba/Application\ Data/uTorrent\ Web/utweb.exe
+# bindsym $mod+Control+t exec wine /home/eiba/.wine/drive_c/users/eiba/Application\ Data/uTorrent\ Web/utweb.exe
 
 # Stop system from sleeping and suspending:
 # sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 # Enable sleep again:
 # sudo systemctl unmask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
-
+exec xrandr --dpi 170

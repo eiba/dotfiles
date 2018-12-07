@@ -4,7 +4,7 @@ configuration {
 }
 
 * {
-    font: "SF Pro Text Light 25";
+    font: "SF Pro Text Light 40";
     padding: 5px 10px;
   /*background-color: #414141;*/
     color: #fff;
@@ -14,9 +14,9 @@ configuration {
 
 window {
     border-radius: 5px;
-    height: 500px;
-    width: 750px;
-    padding: 20px;
+    height: 770px;
+    width: 1150px;
+    padding: 30px;
 }
 
 #prompt {
@@ -24,8 +24,8 @@ window {
 }
       
 listview {
-    padding: 40px 10px 0px 10px;
-    spacing: 0.5em;
+    padding: 60px 10px 0px 10px;
+    spacing: 0.6em;
 }
 
 #element selected {

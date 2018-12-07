@@ -3,12 +3,12 @@
     /*background-color: #414141;*/
     background-color: #383c4a;
     color: #fff;
-    font: "Font Awesome 5 Free 45";
+    font: "Font Awesome 5 Free 70";
 }
 
 #window {
-  width: 700px;
-  height: 250px;
+  width: 1100px;
+  height: 400px;
   border-radius: 5px;
   children: [ horibox ];
 }
@@ -20,7 +20,7 @@
   layout: horizontal;
 }
 #element {
-  padding: 80px 75px 0px ;
+  padding: 140px 126px 0px ;
 }
 #element selected {
   text-color: #81a1c1;
